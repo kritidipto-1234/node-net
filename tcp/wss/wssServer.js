@@ -71,4 +71,4 @@ const httpServer = http.createServer((req, res) => {
   res.writeHead(404).end();
 });
 const wss = new WssServer(httpServer);
-httpServer.listen(8000, () => console.log(`ws://localhost:8000 (ws ready, ${wss.wss.clients.size} clients)`));
+httpServer.listen(8001, () => console.log(`ws://localhost:8001 (ws ready, ${wss.wss.clients.size} clients)`));

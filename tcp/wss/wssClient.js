@@ -1,6 +1,6 @@
 import WebSocket from "ws";
 
-const ws = new WebSocket("ws://localhost:8000", { headers: { isLoggedin: "true" } });
+const ws = new WebSocket("ws://localhost:8001", { headers: { isLoggedin: "true" } });
 
 ws.on("open", () => {
   console.log("connected");

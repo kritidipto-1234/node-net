@@ -45,19 +45,19 @@ const socket = net.createConnection(8001, "127.0.0.1", () => {
 })
 
 function sendData(socket){
-  setTimeout(() => {
+  setInterval(() => {
     const n = String(Math.floor(100 + Math.random() * 900))
     console.log("sent:", n)
-    // socket.write(encodeFrame(OP.TEXT, n,true))
+    socket.write(encodeFrame(OP.TEXT, n,true))
 
-    const frame1=encodeFrame(OP.TEXT, "aa",true)
-    const frame2=encodeFrame(OP.TEXT, "bb",true)
-    const frame3=encodeFrame(OP.TEXT, "cccc",true)
-    const half = Math.floor(frame3.length / 2)
-    socket.write(Buffer.concat([frame1, frame2, frame3.subarray(0, half)]))
-    setTimeout(() => socket.write(frame3.subarray(half)), 1100)
+    // const frame1=encodeFrame(OP.TEXT, "aa",true)
+    // const frame2=encodeFrame(OP.TEXT, "bb",true)
+    // const frame3=encodeFrame(OP.TEXT, "cccc",true)
+    // const half = Math.floor(frame3.length / 2)
+    // socket.write(Buffer.concat([frame1, frame2, frame3.subarray(0, half)]))
+    // setTimeout(() => socket.write(frame3.subarray(half)), 1100)
 
-  }, 500)
+  }, 2000)
 }
 
 let upgraded = false
