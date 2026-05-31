@@ -1,0 +1,15 @@
+{
+  "name": "websocket-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon nextjsServer.js & nodemon wssServer.js",
+    "dev": "nodemon wssClientRaw.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

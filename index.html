@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>WebSocket Echo (Reversed)</title>
+    <style>
+      body { background-color: green; font-family: system-ui; max-width: 480px; margin: 2rem auto; border: 1px solid #ccc; padding: 1rem; }
+      #log { border: 1px solid #ccc; padding: .5rem; height: 240px; overflow-y: auto; }
+      .me { color: #06c; } .srv { color: #c30; }
+      .err { color: #b00; font-weight: bold; } .sys { color: #888; font-style: italic; }
+      form { display: flex; gap: .5rem; margin-top: .5rem; }
+      input { flex: 1; padding: .4rem; }
+    </style>
+  </head>
+  <body>
+    <h2>Reverse Echo</h2>
+    <div id="log"></div>
+    <form id="f">
+      <input id="m" placeholder="type something..." autocomplete="off" />
+      <button type="submit">Send</button>
+      <button type="button" id="disconnect">Disconnect</button>
+      <button type="button" id="reconnect">Reconnect</button>
+    </form>
+    <script src="/client.js"></script>
+  </body>
+</html>
