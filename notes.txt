@@ -28,6 +28,7 @@ Understand websocket frames
 Use Wireshark/Tcpdump to understand TCP & UDP individual packets.
 Understand the importance of http 1.1 over 1.0 checking new connection creations
 Check the 6 tcp connection browser limit 
+Understand http HOL blocking and why http2 is necessary
 
 HTTP 1.0 - New TCP connection(socket) every request.
 HTTP 1.1 - Reuse TCP connection using keep-alive.
