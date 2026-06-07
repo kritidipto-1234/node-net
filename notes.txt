@@ -1,0 +1,33 @@
+
+
+TCP is network layer protocol 
+TCP does syn ack 3 way handshake to agree on serial numbers and then creates a stateful connection
+That has nothing to do with TLS/SSL handshake that is related to https
+TCP has built in ordering,Reliability, congestion control , backpressure handling
+TCP is expensive and slow to startup
+HTTP is just a string formatting protocol. That string is snend thru TCP
+Wss is another such protocol.
+Wss protocol - upgrade using http then switch to wss frame protocol(a made up string format).
+
+
+
+Over the internet everything is send as a meaningless byte array.(A PACKET)
+All "protocols" just denote what order info is send and thus respective parser can make sense out of that byte array
+Wss frames are just byte arrays . Only wss protocol aware parser can make sense of it.
+A Internet Packet contains lot of information . In the start it has essential info for TCP/UDP layer(eg source/target IP)
+Towards the end contains the actual payload (WSS/HTTP)
+
+UDP is network layer protocol
+UDP is very simple. Send byte array to a IP and forget. 
+There is no real connection in UDP unlike TCP . Its stateless.
+UDP doesnt care about ordering,Reliability, congestion control , backpressure handling
+UDP is stateless. 
+
+Todo
+Understand websocket frames
+Use Wireshark/Tcpdump to understand TCP & UDP individual packets.
+Understand the importance of http 1.1 over 1.0 checking new connection creations
+
+HTTP 1.0 - New TCP connection(socket) every request.
+HTTP 1.1 - Reuse TCP connection using keep-alive.
+HTTP 2.0 - 

@@ -13,9 +13,9 @@ client.on("message", (msg, rinfo) => {
   // client.close()
 })
 
-setInterval(() => {
+setTimeout(() => {
   const message = "ping"+Date.now()
-  client.send(message, 8080, "localhost", (err) => {
+  client.send("ping", 8080, "localhost", (err) => {
     console.log("Sent:", message)
   })
 }, 1000)
