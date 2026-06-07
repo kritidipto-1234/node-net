@@ -49,6 +49,10 @@ const server = net.createServer(socket => {
       respond(socket, body, "application/json")
     }
   })
+
+  socket.on("end", () => {
+    console.log("connection ended")
+  })
 })
 
 server.listen(8080)
