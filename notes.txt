@@ -27,7 +27,8 @@ Todo
 Understand websocket frames
 Use Wireshark/Tcpdump to understand TCP & UDP individual packets.
 Understand the importance of http 1.1 over 1.0 checking new connection creations
+Check the 6 tcp connection browser limit 
 
 HTTP 1.0 - New TCP connection(socket) every request.
 HTTP 1.1 - Reuse TCP connection using keep-alive.
-HTTP 2.0 - 
+HTTP 2.0 - WHy?  TCP has no req-res tie up . So prev http used to tie req res by enforcing HOL blocking
